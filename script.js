@@ -17,6 +17,16 @@ if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
 }
 
+const button = document.getElementById('themeToggle');
+
+button.addEventListener('click', function() {
+    if (button.textContent === '🌙') {
+        button.textContent = '☀️';
+    } else {
+        button.textContent = '🌙';
+    }
+});
+
 function addTask() {
     const input = document.getElementById("taskInput");
     const text = input.value.trim();
